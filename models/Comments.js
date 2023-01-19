@@ -15,7 +15,11 @@ Comments.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    comment_date_created: {
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
@@ -26,13 +30,6 @@ Comments.init(
         model: "user",
         key: "id",
       },
-    },
-    rating_id:{
-        type: DataTypes.INTEGER,
-        references:{
-            model:"ratings",
-            key:"id",
-        },
     },
     show_id:{
         type: DataTypes.INTEGER,
