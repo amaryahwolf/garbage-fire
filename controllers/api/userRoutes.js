@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Comments, Ratings, Show, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
     // Get all users and JOIN with show data
     const userData = await User.findAll({
@@ -10,6 +10,11 @@ router.get('/', async (req, res) => {
         {
           model: Show,
           attributes: ['placeholder'],
+        },
+        {
+            model: Comments,
+            attributes: ['comment_id', 'comment_text', 'comment_date_created' ],
+
         },
       ],
     });
