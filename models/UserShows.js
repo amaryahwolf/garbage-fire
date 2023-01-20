@@ -11,20 +11,19 @@ Show.init(
         primaryKey: true,
         autoIncrement: true,
       },
-      filename: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "user",
+          key: "id",
+        },
       },
-      title: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      years_running: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      description: {
-        type: DataTypes.STRING,
+      show_id:{
+          type: DataTypes.INTEGER,
+          references:{
+              model:"show",
+              key:"id",
+          },
       },
     },
     {
@@ -32,8 +31,8 @@ Show.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'show',
+      modelName: 'usershows',
     }
   );
   
-  module.exports = Show;
+  module.exports = UserShows;
