@@ -34,3 +34,5 @@ Show.belongsToMany(User, {
     },
     as: 'show-users'
 });
+
+module.exports = { Comments, Show, User, UserShows };
