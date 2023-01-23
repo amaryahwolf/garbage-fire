@@ -1,13 +1,15 @@
-<h1>Individual Show</h1>
+<div class="card" style="width: 18rem;">
+  <img src="/images/{{ filename }}" class="card-img-top" alt="Show Image">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    {{#each Comments as |comment| }}
+    <li class="list-group-item">{{comment_text}}</li>
+    {{/each}}
+  </ul>
+</div>
 
-<p>{{title}}</p>
-<img src="/images/{{ filename }}">
-<p>{{show.description}}</p>
-{{#each Comments as |comment| }}
-<p>{{comment_text}}</p>
-{{/each}}
-{{#each Comments as |rating| }}
-<p>{{rating}}</p>
-{{/each}}
 
 
