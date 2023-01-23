@@ -1,0 +1,96 @@
+
+body {
+    background-image: url('https://www.usmagazine.com/wp-content/uploads/2020/12/Flavor-Love-Most-Memorable-Contestants-Where-Are-They-Now-Landing.jpg?w=1600&quality=86&strip=all');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFFFFF;
+    font-family: 'Encode Sans Condensed', sans-serif;
+  }
+  
+  h1 {
+    color:blue
+  }
+  
+  .nav {
+    /* background-color: rgba(0,0,0,0.0); */
+    opacity: .4;
+  }
+  
+  .container {
+  
+    
+  }
+  
+  
+  .carousel {
+    width:640px;
+    height:360px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    opacity: 2;
+    
+  }
+  
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+   .card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    opacity: 9;
+  }
+  
+  .btn-primary {
+    /* background-color: #ff0000; */
+    background-color: Transparent;
+    color: white;
+    border: none;
+    color: black;
+    /* background-color: #ff0000; */
+  
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+  }
+  
+  
+  .btn-primary:hover {
+    background-color: #ff0000; 
+  }
+  
+  .card {
+  background-color: transparent;
+  }
+    
+  card-title, p {
+    color: black
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #ff0000;
+    color: black;
+    
+    
+    
+  }
+  
+    /* background-image: url('https://dailyresearchplot.com/wp-content/uploads/2022/11/1-60.jpg');
+    background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Bellota Text', cursive; */
+      
+  
+  
+      
+  
+  
