@@ -1,0 +1,13 @@
+<h1>Individual Show</h1>
+
+<p>{{title}}</p>
+<img src="/images/{{ filename }}">
+<p>{{show.description}}</p>
+{{#each Comments as |comment| }}
+<p>{{comment_text}}</p>
+{{/each}}
+{{#each Comments as |rating| }}
+<p>{{rating}}</p>
+{{/each}}
+
+

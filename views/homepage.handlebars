@@ -1,3 +1,10 @@
+
+<h1>This is the homepage</h1>
+{{#each shows as |show| }}
+<p>{{show.title}}</p>
+<img src="./images/{{ show.filename }}">
+{{/each}}
+
 //after you login, it will be the landing page 
 
 <!-- Loop over each object in the projects array -->
@@ -24,3 +31,4 @@
   </div>
 </div>
 {{/each}}
+
