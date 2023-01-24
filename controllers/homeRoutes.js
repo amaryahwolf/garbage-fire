@@ -37,8 +37,8 @@ router.get('/show/:id', async (req, res) => {
     }
   });
 
-// GET all shows, comments, ratings for feed view (ADD withAuth)
-router.get('/feed', async (req, res) => {
+// GET all shows, comments, ratings for feed view
+router.get('/feed', withAuth, async (req, res) => {
     try {
         const showData = await Show.findAll({
             include: [{ model: Comments }]
@@ -56,7 +56,7 @@ res.render('feed', {
 }
 });  
 
-// GET shows by rating for rating view (ICEBOX: NOT WORKING)
+// GET shows by rating for rating view (ICEBOX)
 router.get('/rating', async (req, res) => {
     try {
         const showData = await Show.findAll()
@@ -73,16 +73,16 @@ res.render('rating', {
 }
 });
 
-// GET profile (2nd priority)
+// GET profile
 router.get('/profile', withAuth, async (req, res) => {
     try {
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: Show, through: UserShows, as: 'show-users' }],
+        include: [{ model: Show, through: UserShows, include: Comments }],
       });
   
       const user = userData.get({ plain: true });
-  
+      console.log(user);
       res.render('profile', {
         ...user,
         logged_in: true

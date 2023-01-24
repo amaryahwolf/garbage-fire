@@ -1,8 +1,7 @@
 const router = require("express").Router();
-const User = require("../../models/User");
-const Comments = require("../../models/Comments");
-const Show = require("../../models/Show");
+const { User, Comments, Show, UserShow } = require("../../models");
 
+// CREATE a new user session
 router.post("/", async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -14,11 +13,13 @@ router.post("/", async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });
 
-router.post("/login", async (req, res) => {
+// CREATE a new login session for user by logging in or signing up
+router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -49,7 +50,8 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.post("/logout", (req, res) => {
+// Destroy user session by logging out
+router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
@@ -58,34 +60,5 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
-
-router.get("/profile", withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
-      include: [
-        {
-          model: Show,
-          through: {
-            model: UserShows,
-          },
-          as: "show-users",
-        },
-        { model: Comments },
-      ],
-    });
-
-    const user = userData.get({ plain: true });
-
-    res.render("profile", {
-      ...user,
-      logged_in: true,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 
 module.exports = router;

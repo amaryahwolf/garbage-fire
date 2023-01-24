@@ -1,9 +1,25 @@
+<div class="row justify-content-center">
+  <div class="text-center text-dark bg-white w-auto m-3">
+    <h2>Browse the Trash!</h2>
+  </div>
+</div>
 
-{{#each shows as |show| }}
-<p>{{show.title}}</p>
-{{!-- <p>{{show.description}}</p> --}}
-<img src="./images/{{ show.filename }}">
-{{/each}}
+<div class="row justify-content-center">
+<div class="show-card" style="width: 30rem;">
+  {{#each shows as |show| }}
+  <img src="/images/{{ filename }}" class="card-img-top" alt="Show Image">
+  <div class="card-body">
+    <h5 class="card-title">{{show.title}}  <button id="add-btn"><i class="fa-solid fa-plus"></i></button><p id="clickme">Add show to My Trash!</p></h5>
+    <p class="card-text">{{show.description}}</p>
+    <ul class="list-group list-group-flush">
+    {{#each show.Comments as |comment| }}
+    <li class="list-group-item">{{comment_text}}<br></li>
+    {{/each}}
+  </ul>
+  {{/each}}
+  </div> 
+</div>
+</div>
 
-//all tv shows and comments and ratings
+<script src="./js/feed.js"></script>
 

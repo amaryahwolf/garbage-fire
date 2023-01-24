@@ -1,96 +1,157 @@
-
 body {
-    background-image: url('https://www.usmagazine.com/wp-content/uploads/2020/12/Flavor-Love-Most-Memorable-Contestants-Where-Are-They-Now-Landing.jpg?w=1600&quality=86&strip=all');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: #FFFFFF;
-    font-family: 'Encode Sans Condensed', sans-serif;
-  }
-  
-  h1 {
-    color:blue
-  }
-  
-  .nav {
-    /* background-color: rgba(0,0,0,0.0); */
-    opacity: .4;
-  }
-  
-  .container {
-  
-    
-  }
-  
-  
-  .carousel {
-    width:640px;
-    height:360px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    opacity: 2;
-    
-  }
-  
-  #container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  
-   .card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    opacity: 9;
-  }
-  
-  .btn-primary {
-    /* background-color: #ff0000; */
-    background-color: Transparent;
-    color: white;
-    border: none;
-    color: black;
-    /* background-color: #ff0000; */
-  
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-  }
-  
-  
-  .btn-primary:hover {
-    background-color: #ff0000; 
-  }
-  
-  .card {
+  background-image: url("https://www.usmagazine.com/wp-content/uploads/2020/12/Flavor-Love-Most-Memorable-Contestants-Where-Are-They-Now-Landing.jpg?w=1600&quality=86&strip=all");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+
+.nav {
+  opacity: 0.4;
+}
+
+.carousel {
+  width: 640px;
+  height: 360px;
+  margin: auto;
+  display: flex;
+  opacity: 2;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  float: center;
+  vertical-align: middle;
+  margin-top: 330px;
+  border-radius: 25px;  
+  padding: 20px; 
+  height: 150px;   
+}
+
+.card {
+  margin: 0 auto 10px; /* Added */
+  float: none; /* Added */ /* Added */
+  opacity: 9;
+  float: right;
   background-color: transparent;
-  }
-    
-  card-title, p {
-    color: black
-  }
-  
-  .btn-outline-success:hover {
+  margin: 0 auto 10px; /* Added */
+  float: none; /* Added */ /* Added */
+  opacity: 9;
+}
+
+.btn-primary {
+  background-color: Transparent;
+  color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+}
+
+.btn-primary:hover {
+  background-color: #ff0000; 
+}
+
+.btn-outline-success:hover {
+    background-color: #ff0000;
+}
+
+card-title,
+p {
+  color: black;  
+}
+
+.btn-outline-success:hover {
+  /* background-color: #ff0000; */
+  color: black;
+}
+
+.card-body {
+  background-color: pink;
+  opacity: .6;
+  border-style: outset;
+}
+
+.btn-outline-success:hover {
     background-color: #ff0000;
     color: black;
-    
-    
-    
   }
   
-    /* background-image: url('https://dailyresearchplot.com/wp-content/uploads/2022/11/1-60.jpg');
-    background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      font-family: 'Bellota Text', cursive; */
+  /* Login/SignUp Form Styling */
+  form .form-input,
+  form .form-textarea {
+    display: block;
+  }
+  
+  form label,
+  form .form-label {
+    font-size: 1.2rem;
+  }
+  
+  form .form-input {
+    padding: 0.75rem;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    border: 1px solid #484848;
+    border-radius: 0.3rem;
+  }
+
+  #login-forms {
+    background-color: rgba(255, 255, 255, 0.51);
+    width: 50%;
+    color: black;
+  }
+
+  /* Show Card Styling */
+  .show-card {
+    background-color: rgba(255, 255, 255, 0.51);
+    color: black;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h5 {
+    font-weight: bold;
+  }
+
+ /* Feed Styling */
+ #clickme {
+  display: none;
+  font-size: 15px;
+ }
+
+ #add-btn:hover + p {
+  display: block;
+ }
+
+ #delete-btn:hover + p {
+  display: block;
+ }
+
+ /* Profile Styling */
+ .browse-btn {
+  background-color: red;
+  margin: 20px;
+  font-size: larger;
+ }
+
+
+  
+
+  
+ 
+
+ 
       
   
   
       
   
-  
+
