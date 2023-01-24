@@ -5,46 +5,47 @@ body {
   background-size: cover;
   color: #ffffff;
   font-family: "Encode Sans Condensed", sans-serif;
-  
 }
-
-
 
 .nav {
-  /* background-color: rgba(0,0,0,0.0); */
   opacity: 0.4;
 }
-
-
 
 .carousel {
   width: 640px;
   height: 360px;
   margin: auto;
   display: flex;
-  
   opacity: 2;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
+  float: center;
+  vertical-align: middle;
+  margin-top: 330px;
+  border-radius: 25px;  
+  padding: 20px; 
+  height: 150px;   
 }
 
 .card {
   margin: 0 auto 10px; /* Added */
   float: none; /* Added */ /* Added */
   opacity: 9;
+  float: right;
+  background-color: transparent;
+  margin: 0 auto 10px; /* Added */
+  float: none; /* Added */ /* Added */
+  opacity: 9;
 }
 
 .btn-primary {
-  
   background-color: Transparent;
   color: white;
   border: none;
   color: black;
-  
-
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -54,68 +55,82 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #ff0000;
-  
+  background-color: #ff0000; 
 }
 
 .btn-outline-success:hover {
     background-color: #ff0000;
 }
 
-.
-
 card-title,
 p {
-  color: black;
-  
+  color: black;  
 }
-
-
 
 .btn-outline-success:hover {
   /* background-color: #ff0000; */
   color: black;
 }
 
-.card {
-  opacity: .9;
-  float: right;
-  background-color: transparent;
-  margin: 0 auto 10px; /* Added */
-  float: none; /* Added */ /* Added */
-  opacity: 9;
- 
-
-  /* justify-content: flex-end; */
-}
-
 .card-body {
   background-color: pink;
   opacity: .6;
   border-style: outset;
-  
 }
 
-.container {
-    float: center;
-    vertical-align: middle;
-    margin-top: 330px;
-    border-radius: 25px;
+.btn-outline-success:hover {
+    background-color: #ff0000;
+    color: black;
+  }
   
-padding: 20px; 
+  /* Login/SignUp Form Styling */
+  form .form-input,
+  form .form-textarea {
+    display: block;
+  }
   
-  height: 150px;   
-     
-    
-    
-}
+  form label,
+  form .form-label {
+    font-size: 1.2rem;
+  }
+  
+  form .form-input {
+    padding: 0.75rem;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    border: 1px solid #484848;
+    border-radius: 0.3rem;
+  }
+
+  #login-forms {
+    background-color: rgba(255, 255, 255, 0.51);
+    width: 50%;
+    color: black;
+  }
+
+  /* Show Card Styling */
+  .show-card {
+    background-color: rgba(255, 255, 255, 0.51);
+    color: black;
+  }
+
+  h5 {
+    font-weight: bold;
+  }
+
+ 
 
 
+  
 
+  
+ 
 
+ 
+      
+  
+  
+      
+  
 
-/* background-image: url('https://dailyresearchplot.com/wp-content/uploads/2022/11/1-60.jpg');
-    background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      font-family: 'Bellota Text', cursive; */
