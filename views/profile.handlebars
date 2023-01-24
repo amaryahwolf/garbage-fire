@@ -1,20 +1,29 @@
 <div class="row justify-content-center">
   <div class="text-center text-dark bg-white w-auto m-3">
-    <h2>Let's get Trashy, {{name}}!</h2>
+    <h2>Let's get Trashy, {{userInfo.name}}!</h2>
   </div>
 </div>
 
 <div class="row justify-content-center">
 <div class="show-card" style="width: 30rem;">
-  {{#each shows as |show| }}
+  {{#each userInfo.shows as |show| }}
   <img src="/images/{{ filename }}" class="card-img-top" alt="Show Image">
   <div class="">
-    <h5 class="card-title">{{show.title}}  <button id="delete-btn" data-id="{{show.id}}"><i class="fa-solid fa-trash-can"></i></i></button><p id="clickme">Delete Show from My Trash!</p></h5>
+    <h5 class="card-title">{{show.title}}  <button id="delete-btn" data-id="{{show.id}}"><i class="fa-solid fa-trash-can"></i></button><p id="clickme">Delete Show from My Trash!</p></h5>
     <p class="card-text">{{description}}</p>
     <ul class="list-group list-group-flush">
     {{#each show.Comments as |comment| }}
-    <li class="list-group-item">{{comment_text}}<p>-{{user.name}}</p><p>{{format_date date_created}}</p></li>
+    <li class="list-group-item">{{comment_text}}<p>-{{../../userInfo.name}}</p><p>{{format_date date_created}}</p></li>
     {{/each}}
+    <form class="form-new-comment">
+    <div class="form-group">
+        <input type=hidden id="show-id" value="{{show.id}}">
+        <textarea class="form-input" id="comment-desc" name="comment-desc" placeholder="Write a comment!"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">submit</button>
+      </div>     
+  </form>
   </ul>
   {{/each}}
   </div>  
@@ -27,3 +36,4 @@
 </div>
 
 <script src="./js/profile.js"></script>
+<script src="./js/comments.js"></script>

@@ -77,17 +77,19 @@ res.render('rating', {
 // GET profile
 router.get('/profile', withAuth, async (req, res) => {
     try {
+      
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
         include: [{ model: Show, through: UserShows, include: Comments, }, {model: Comments, include: [{model: User}]}],
       });
   
       const user = userData.get({ plain: true });
-      console.log(user);
-      res.render('profile', {
-        ...user,
-        logged_in: true
-      });
+      console.log('user.user', user.user);
+      console.log( 'user', user);
+      const userInfo = { ...user,
+        logged_in: true,
+        username: user.name}
+      res.render('profile', {userInfo});
     } catch (err) {
       res.status(500).json(err);
     }
