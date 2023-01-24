@@ -41,11 +41,12 @@ router.get('/show/:id', async (req, res) => {
 router.get('/feed', withAuth, async (req, res) => {
     try {
         const showData = await Show.findAll({
-            include: [{ model: Comments }]
+            include: [{ model: Comments, include: [{model: User}] }]
           })
 
 const shows = showData.map((show) => show.get({ plain: true }));
-
+console.log(shows)
+// res.json(shows)
 res.render('feed', {
     shows,
     logged_in: req.session.logged_in
@@ -78,7 +79,7 @@ router.get('/profile', withAuth, async (req, res) => {
     try {
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: Show, through: UserShows, include: Comments }],
+        include: [{ model: Show, through: UserShows, include: Comments, }, {model: Comments, include: [{model: User}]}],
       });
   
       const user = userData.get({ plain: true });
