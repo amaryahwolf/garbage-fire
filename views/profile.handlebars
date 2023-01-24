@@ -1,14 +1,15 @@
-<div class="row">
-  <div class="text-center text-dark">
+<div class="row justify-content-center">
+  <div class="text-center text-dark bg-white w-auto m-3">
     <h2>Let's get Trashy, {{name}}!</h2>
   </div>
 </div>
 
-<div class="card show-card" style="width: 22rem;">
+<div class="row justify-content-center">
+<div class="show-card" style="width: 30rem;">
   {{#each shows as |show| }}
   <img src="/images/{{ filename }}" class="card-img-top" alt="Show Image">
   <div class="card-body">
-    <h5 class="card-title">{{title}}</h5>
+    <h5 class="card-title">{{show.title}}  <button id="delete-btn"><i class="fa-solid fa-trash-can"></i></i></button><p id="clickme">Delete Show from My Trash!</p></h5>
     <p class="card-text">{{description}}</p>
     <ul class="list-group list-group-flush">
     {{#each show.Comments as |comment| }}
@@ -16,6 +17,13 @@
     {{/each}}
   </ul>
   {{/each}}
-  </div>
-  
+  </div>  
 </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <a href='/feed'><button type="button" class="btn btn-primary browse-btn">Browse More Shows</button></a>
+   <button type="button" class="btn btn-primary browse-btn">Add a Show</button>
+</div>
+
+<script src="./js/profile.js"></script>

@@ -37,7 +37,7 @@ router.get('/show/:id', async (req, res) => {
     }
   });
 
-// GET all shows, comments, ratings for feed view (ADD withAuth)
+// GET all shows, comments, ratings for feed view
 router.get('/feed', withAuth, async (req, res) => {
     try {
         const showData = await Show.findAll({
@@ -56,7 +56,7 @@ res.render('feed', {
 }
 });  
 
-// GET shows by rating for rating view (ICEBOX: NOT WORKING)
+// GET shows by rating for rating view (ICEBOX)
 router.get('/rating', async (req, res) => {
     try {
         const showData = await Show.findAll()

@@ -7,18 +7,10 @@ body {
     font-family: 'Encode Sans Condensed', sans-serif;
   }
   
-  h1 {
-    color:blue
-  }
-  
   .nav {
     opacity: .4;
   }
-  
-  .container {
-  
-  }
-  
+
   .carousel {
     width:640px;
     height:360px;
@@ -38,6 +30,7 @@ body {
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
     opacity: 9;
+    background-color: transparent;
   }
   
   .btn-primary {
@@ -55,10 +48,6 @@ body {
   
   .btn-primary:hover {
     background-color: #ff0000; 
-  }
-  
-  .card {
-  background-color: transparent;
   }
     
   card-title, p {
@@ -100,13 +89,34 @@ body {
   .show-card {
     background-color: rgba(255, 255, 255, 0.51);
     color: black;
+    margin: 10px;
+    padding: 10px;
   }
 
   h5 {
     font-weight: bold;
   }
 
- 
+ /* Feed Styling */
+ #clickme {
+  display: none;
+  font-size: 15px;
+ }
+
+ #add-btn:hover + p {
+  display: block;
+ }
+
+ #delete-btn:hover + p {
+  display: block;
+ }
+
+ /* Profile Styling */
+ .browse-btn {
+  background-color: red;
+  margin: 20px;
+  font-size: larger;
+ }
 
 
   
