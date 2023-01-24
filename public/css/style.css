@@ -1,60 +1,84 @@
 body {
-    background-image: url('https://www.usmagazine.com/wp-content/uploads/2020/12/Flavor-Love-Most-Memorable-Contestants-Where-Are-They-Now-Landing.jpg?w=1600&quality=86&strip=all');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: #FFFFFF;
-    font-family: 'Encode Sans Condensed', sans-serif;
-  }
-  
-  .nav {
-    opacity: .4;
-  }
+  background-image: url("https://www.usmagazine.com/wp-content/uploads/2020/12/Flavor-Love-Most-Memorable-Contestants-Where-Are-They-Now-Landing.jpg?w=1600&quality=86&strip=all");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-family: "Encode Sans Condensed", sans-serif;
+}
 
-  .carousel {
-    width:640px;
-    height:360px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    opacity: 2;  
-  }
+.nav {
+  opacity: 0.4;
+}
 
-  #container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.carousel {
+  width: 640px;
+  height: 360px;
+  margin: auto;
+  display: flex;
+  opacity: 2;
+}
 
-   .card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    opacity: 9;
-    background-color: transparent;
-  }
-  
-  .btn-primary {
-    background-color: Transparent;
-    color: white;
-    border: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #ff0000; 
-  }
-    
-  card-title, p {
-    color: black
-  }
-  
-  .btn-outline-success:hover {
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  float: center;
+  vertical-align: middle;
+  margin-top: 330px;
+  border-radius: 25px;  
+  padding: 20px; 
+  height: 150px;   
+}
+
+.card {
+  margin: 0 auto 10px; /* Added */
+  float: none; /* Added */ /* Added */
+  opacity: 9;
+  float: right;
+  background-color: transparent;
+  margin: 0 auto 10px; /* Added */
+  float: none; /* Added */ /* Added */
+  opacity: 9;
+}
+
+.btn-primary {
+  background-color: Transparent;
+  color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+}
+
+.btn-primary:hover {
+  background-color: #ff0000; 
+}
+
+.btn-outline-success:hover {
+    background-color: #ff0000;
+}
+
+card-title,
+p {
+  color: black;  
+}
+
+.btn-outline-success:hover {
+  /* background-color: #ff0000; */
+  color: black;
+}
+
+.card-body {
+  background-color: pink;
+  opacity: .6;
+  border-style: outset;
+}
+
+.btn-outline-success:hover {
     background-color: #ff0000;
     color: black;
   }
@@ -130,4 +154,4 @@ body {
   
       
   
-  
+
