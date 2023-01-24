@@ -15,11 +15,29 @@
     {{#each show.Comments as |comment| }}
     <li class="list-group-item">{{comment_text}}<br></li>
     {{/each}}
+    <form class="form-new-comment">
+    <div class="form-group">
+        <input type=hidden id="show-id" value="{{show.id}}">
+        <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+      
+  </form>
+
   </ul>
   {{/each}}
+  
+
+
+
+
   </div> 
 </div>
 </div>
 
 <script src="./js/feed.js"></script>
+
+<script type="text/javascript" src="./js/comments.js"></script>
 
