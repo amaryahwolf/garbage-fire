@@ -1,14 +1,15 @@
-<div class="row">
-  <div class="text-center text-dark">
+<div class="row justify-content-center">
+  <div class="text-center text-dark bg-white w-auto m-3">
     <h2>Browse the Trash!</h2>
   </div>
 </div>
 
-<div class="card show-card" style="width: 22rem;">
+<div class="row justify-content-center">
+<div class="show-card" style="width: 30rem;">
   {{#each shows as |show| }}
   <img src="/images/{{ filename }}" class="card-img-top" alt="Show Image">
   <div class="card-body">
-    <h5 class="card-title">{{show.title}}</h5><button><i id="add-btn" class="fa-solid fa-plus"></i></button>
+    <h5 class="card-title">{{show.title}}  <button id="add-btn"><i class="fa-solid fa-plus"></i></button><p id="clickme">Add show to My Trash!</p></h5>
     <p class="card-text">{{show.description}}</p>
     <ul class="list-group list-group-flush">
     {{#each show.Comments as |comment| }}
@@ -17,6 +18,7 @@
   </ul>
   {{/each}}
   </div> 
+</div>
 </div>
 
 <script src="./js/feed.js"></script>
