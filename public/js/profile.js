@@ -7,7 +7,7 @@ const deleteShowHandler = async (event) => {
         const id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/shows/${id}`, {
-        method: 'POST',
+        method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
       });
     

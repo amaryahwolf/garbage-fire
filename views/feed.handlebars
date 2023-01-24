@@ -4,16 +4,16 @@
   </div>
 </div>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center" id="show-cards">
 <div class="show-card" style="width: 30rem;">
   {{#each shows as |show| }}
   <img src="/images/{{ filename }}" class="card-img-top" alt="Show Image">
-  <div class="card-body">
-    <h5 class="card-title">{{show.title}}  <button id="add-btn"><i class="fa-solid fa-plus"></i></button><p id="clickme">Add show to My Trash!</p></h5>
+  <div class="">
+    <h5 class="card-title">{{show.title}}  <button id="add-btn" data-id="{{show.id}}">+</button><p id="clickme">Add show to My Trash!</p></h5>
     <p class="card-text">{{show.description}}</p>
     <ul class="list-group list-group-flush">
     {{#each show.Comments as |comment| }}
-    <li class="list-group-item">{{comment_text}}<br></li>
+    <li class="list-group-item">{{comment_text}}<p>-{{user.name}}</p><p>{{format_date date_created}}</p></li>
     {{/each}}
   </ul>
   {{/each}}
