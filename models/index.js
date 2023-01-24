@@ -24,7 +24,7 @@ User.belongsToMany(Show, {
         model: UserShows,
         unique: false
     },
-    as: 'user-shows'
+    // as: 'user-shows'
 });
 
 Show.belongsToMany(User, {
@@ -32,7 +32,7 @@ Show.belongsToMany(User, {
         model: UserShows,
         unique: false
     },
-    as: 'show-users'
+    // as: 'show-users'
 });
 
 module.exports = { Comments, Show, User, UserShows };
