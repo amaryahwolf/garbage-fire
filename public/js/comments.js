@@ -14,7 +14,7 @@ const show_id = document.querySelector("#show-id").value.trim();
     });
 
     if (response.ok) {
-      document.location.replace(`/feed`);
+      document.location.reload();
     } else {
       alert("Failed to create comment");
     }

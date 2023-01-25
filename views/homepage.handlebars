@@ -1,5 +1,6 @@
 {{!-- Show Carousel --}}
 <div class="container">
+  <a href="/feed">
  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
      <div class="carousel-item active">
@@ -10,7 +11,6 @@
       <img src="./images/{{ show.filename }}" class="d-block w-100" alt="Show Card">
     </div>
   {{/each}}
- 
   {{!-- Carousel buttons --}}
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -21,8 +21,8 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+</a>
 </div>
-
 
 {{!-- Brows Shows by Ratings (ICEBOX) --}}
 <div class="card" style="width: 20rem;">
