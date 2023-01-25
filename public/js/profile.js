@@ -1,7 +1,5 @@
-// Global variables
-const addBtn = document.querySelector('#delete-btn')
+const deleteBtn = document.querySelector('#delete-btn')
 
-// Function to send fetch response to db
 const deleteShowHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
@@ -19,4 +17,4 @@ const deleteShowHandler = async (event) => {
     }
 };
 
-addBtn.addEventListener('click', deleteShowHandler)
+deleteBtn.addEventListener('click', deleteShowHandler)

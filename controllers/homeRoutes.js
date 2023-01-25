@@ -27,7 +27,6 @@ router.get('/show/:id', async (req, res) => {
       });
   
       const show = showData.get({ plain: true });
-    //   console.log(show)
       res.render('show', {
         ...show,
         logged_in: req.session.logged_in
@@ -84,8 +83,6 @@ router.get('/profile', withAuth, async (req, res) => {
       });
   
       const user = userData.get({ plain: true });
-      console.log('user.user', user.user);
-      console.log( 'user', user);
       const userInfo = { ...user,
         logged_in: true,
         username: user.name}

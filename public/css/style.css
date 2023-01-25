@@ -1,3 +1,4 @@
+/* Main Styling */
 body {
   background-image: url("https://www.usmagazine.com/wp-content/uploads/2020/12/Flavor-Love-Most-Memorable-Contestants-Where-Are-They-Now-Landing.jpg?w=1600&quality=86&strip=all");
   background-repeat: no-repeat;
@@ -11,6 +12,7 @@ body {
   opacity: 0.4;
 }
 
+/* Homepage Styling */
 .carousel {
   width: 300px;
   height: 500px;
@@ -31,13 +33,13 @@ body {
 }
 
 .card {
-  margin: 0 auto 10px; /* Added */
-  float: none; /* Added */ /* Added */
+  margin: 0 auto 10px; 
+  float: none; 
   opacity: 9;
   float: right;
   background-color: transparent;
-  margin: 0 auto 10px; /* Added */
-  float: none; /* Added */ /* Added */
+  margin: 0 auto 10px; 
+  float: none; 
   opacity: 9;
 }
 
@@ -62,13 +64,7 @@ body {
     background-color: #ff0000;
 }
 
-card-title,
-p {
-  color: black;  
-}
-
 .btn-outline-success:hover {
-  /* background-color: #ff0000; */
   color: black;
 }
 
@@ -79,78 +75,84 @@ p {
 }
 
 .btn-outline-success:hover {
-    background-color: #ff0000;
-    color: black;
-  }
+  background-color: #ff0000;
+  color: black;
+}
   
   /* Login/SignUp Form Styling */
 form .form-input,
 form .form-textarea {
-    display: block;
-  }
+  display: block;
+}
   
 form label,
 form .form-label {
-    font-size: 1.2rem;
-  }
+  font-size: 1.2rem;
+}
   
 form .form-input {
-    padding: 0.75rem;
-    color: #1a1a1a;
-    background-color: #ffffff;
-    font-size: 1.2rem;
-    border: 1px solid #484848;
-    border-radius: 0.3rem;
-  }
+  padding: 0.75rem;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  border: 1px solid #484848;
+  border-radius: 0.3rem;
+}
 
 #login-forms {
-    background-color: rgba(255, 255, 255, 0.51);
-    width: 50%;
-    color: black;
-  }
+  background-color: rgba(255, 255, 255, 0.51);
+  width: 50%;
+  color: black;
+}
 
   /* Show Card Styling */
 .show-card {
-    background-color: rgba(255, 255, 255, 0.51);
-    color: black;
-    margin: 10px;
-    padding: 10px;
-  }
+  background-color: rgba(255, 255, 255, 0.51);
+  color: black;
+  margin: 10px;
+  padding: 10px;
+}
 
 h5 {
-    font-weight: bold;
-  }
+  font-weight: bold;
+}
+
+card-title,
+  p {
+    color: black;  
+}
 
  /* Feed Styling */
 #clickme {
   display: none;
   font-size: 15px;
- }
+}
 
 #add-btn:hover + p {
   display: block;
- }
+}
 
 #delete-btn:hover + p {
   display: block;
- }
+}
 
  /* Profile Styling */
 .browse-btn {
   background-color: red;
   margin: 20px;
   font-size: larger;
- }
+}
 
  /* Homepage Styling */
 .rating-card {
   font-size: 20px;
- }
+  font-weight: bold;
+}
 
 #comment-desc {
   width: 100%;
   margin-top: 5px;
- }
+}
 
 
 

@@ -1,7 +1,5 @@
-// Global variables
 const addBtn = document.querySelector('#show-cards')
 
-// Function to send fetch response to db
 const addShowHandler = async (event) => {
   if (event.target.matches('button')) {
 
