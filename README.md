@@ -22,6 +22,7 @@ To install the application locally, ensure that [Node.js](https://nodejs.org/en/
 
 ## Usage
 The application homepage presents a carousel of reality television shows featured throughout the application, as well as an option to browse shows by rating. After signing up or logging in, the user can then browse shows through the feed ('Digs'), read comments, add comments and add shows to their profile ('My Trash') using the + button beside each show title. Through the user's profile, they can view their collection of shows, add coments, and delete the show from their profile using the trash can button beside each show title.
+![Screenshot of application](./public/assets/garbage-fire-screenshot.png)
 
 ## Credits
 Collaborators:<br>
