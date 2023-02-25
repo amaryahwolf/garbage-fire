@@ -1,6 +1,6 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
-const show_id = document.querySelector("#show-id").value.trim();
+  const show_id = document.querySelector("#show-id").value.trim();
 
   const comment_text = document.querySelector("#comment-desc").value.trim();
 

@@ -1,34 +1,36 @@
 {{!-- Show Carousel --}}
 <div class="container">
   <a href="/feed">
- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-     <div class="carousel-item active">
-      <img src="./images/{{ shows.[0].filename }}" class="d-block w-100" alt="Show Card">
-    </div>
-{{#each shows as |show| }}
-    <div class="carousel-item">
-      <img src="./images/{{ show.filename }}" class="d-block w-100" alt="Show Card">
-    </div>
-  {{/each}}
-  {{!-- Carousel buttons --}}
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</a>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/{{ shows.[0].filename }}" class="d-block w-100" alt="Show Card">
+        </div>
+        {{#each shows as |show| }}
+        <div class="carousel-item">
+          <img src="./images/{{ show.filename }}" class="d-block w-100" alt="Show Card">
+        </div>
+        {{/each}}
+        {{!-- Carousel buttons --}}
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </a>
 </div>
 
 {{!-- Brows Shows by Ratings (ICEBOX) --}}
 <div class="card" style="width: 20rem;">
   <!-- <img src="..." class="card-img-top" alt="..."> -->
-  <div class="card-body rating-card"> 
-    <p class="card-text">Choose your show based on rating:</p> 
+  <div class="card-body rating-card">
+    <p class="card-text">Choose your show based on rating:</p>
     <a href="#" class="btn btn-primary">1. Lower IQ</a>
     <br>
     <a href="#" class="btn btn-primary">2. Degenerate</a>
@@ -40,6 +42,3 @@
     <a href="#" class="btn btn-primary">5. Officially a Kardashian</a>
   </div>
 </div>
-
-
-

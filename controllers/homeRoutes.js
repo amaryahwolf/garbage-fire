@@ -4,101 +4,103 @@ const withAuth = require('../utils/auth');
 
 // GET all shows for homepage view
 router.get('/', async (req, res) => {
-    try {
-        const showData = await Show.findAll()
+  try {
+    const showData = await Show.findAll()
 
-const shows = showData.map((show) => show.get({ plain: true }));
+    const shows = showData.map((show) => show.get({ plain: true }));
 
-res.render('homepage', {
-    shows,
-    logged_in: req.session.logged_in
-});
-} catch (err) {
+    res.render('homepage', {
+      shows,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
     console.log(err)
     res.status(500).json(err);
-}
+  }
 });
 
 // GET shows by id with comments & ratings for show view (ADD withAuth)
 router.get('/show/:id', async (req, res) => {
-    try {
-      const showData = await Show.findByPk(req.params.id, {
-        include: [{ model: Comments }]
-      });
-  
-      const show = showData.get({ plain: true });
-      res.render('show', {
-        ...show,
-        logged_in: req.session.logged_in
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+  try {
+    const showData = await Show.findByPk(req.params.id, {
+      include: [{ model: Comments }]
+    });
+
+    const show = showData.get({ plain: true });
+    res.render('show', {
+      ...show,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // GET all shows, comments, ratings for feed view
 router.get('/feed', withAuth, async (req, res) => {
-    try {
-        const showData = await Show.findAll({
-            include: [{ model: Comments, include: [{model: User}] }]
-          })
+  try {
+    const showData = await Show.findAll({
+      include: [{ model: Comments, include: [{ model: User }] }]
+    })
 
-const shows = showData.map((show) => show.get({ plain: true }));
-console.log(shows)
-// res.json(shows)
-res.render('feed', {
-    shows,
-    logged_in: req.session.logged_in
-});
-} catch (err) {
+    const shows = showData.map((show) => show.get({ plain: true }));
+    console.log(shows)
+    // res.json(shows)
+    res.render('feed', {
+      shows,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
     console.log(err)
     res.status(500).json(err);
-}
-});  
+  }
+});
 
 // GET shows by rating for rating view (ICEBOX)
 router.get('/rating', async (req, res) => {
-    try {
-        const showData = await Show.findAll()
+  try {
+    const showData = await Show.findAll()
 
-const shows = showData.map((show) => show.get({ plain: true }));
+    const shows = showData.map((show) => show.get({ plain: true }));
 
-res.render('rating', {
-    shows,
-    logged_in: req.session.logged_in
-});
-} catch (err) {
+    res.render('rating', {
+      shows,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
     console.log(err)
     res.status(500).json(err);
-}
+  }
 });
 
 // GET profile
 router.get('/profile', withAuth, async (req, res) => {
-    try {
-      
-      const userData = await User.findByPk(req.session.user_id, {
-        attributes: { exclude: ['password'] },
-        include: [{ model: Show, through: UserShows, include: Comments, }, {model: Comments, include: [{model: User}]}],
-      });
-  
-      const user = userData.get({ plain: true });
-      const userInfo = { ...user,
-        logged_in: true,
-        username: user.name}
-      res.render('profile', {userInfo});
-    } catch (err) {
-      res.status(500).json(err);
+  try {
+
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Show, through: UserShows, include: Comments, }, { model: Comments, include: [{ model: User }] }],
+    });
+
+    const user = userData.get({ plain: true });
+    const userInfo = {
+      ...user,
+      logged_in: true,
+      username: user.name
     }
-  });
+    res.render('profile', { userInfo });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // GET login
-  router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-    res.render('login');
-  });
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
 
-  module.exports = router;
+module.exports = router;
